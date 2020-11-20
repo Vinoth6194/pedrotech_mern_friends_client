@@ -1,4 +1,26 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
-
+.inputs {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #93fc83;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.inputs input {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  margin: 30px;
+  padding-left: 10px;
+}
