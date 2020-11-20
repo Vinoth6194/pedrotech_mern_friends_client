@@ -24,3 +24,13 @@ body {
   margin: 30px;
   padding-left: 10px;
 }
+.inputs button {
+  border: none;
+  height: 50px;
+  width: 150px;
+  background-color: green;
+  color: white;
+}
+.inputs button:hover {
+  cursor: pointer;
+}
