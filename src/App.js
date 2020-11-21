@@ -13,6 +13,7 @@ function App() {
     })
       .then(() => {
         alert("Post success");
+        setFriendsList([...friendsList, { name: name, age: age }]);
       })
       .catch(() => {
         alert("Post not succeeded");
