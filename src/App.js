@@ -11,9 +11,13 @@ function App() {
       name: name,
       age: age,
     })
-      .then(() => {
+      .then((response) => {
+        console.log(response);
         alert("Post success");
-        setFriendsList([...friendsList, { name: name, age: age }]);
+        setFriendsList([
+          ...friendsList,
+          { _id: response.data._id, name: name, age: age },
+        ]);
       })
       .catch(() => {
         alert("Post not succeeded");
