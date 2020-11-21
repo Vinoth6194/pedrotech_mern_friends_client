@@ -34,6 +34,12 @@ function App() {
     Axios.put("http://localhost:3001/update", {
       newAge: newAge,
       id: id,
+    }).then(() => {
+      setFriendsList(
+        friendsList.map((val) => {
+          return val._id == id ? { _id: id, name: val.name, age: newAge } : val;
+        })
+      );
     });
   };
   return (
