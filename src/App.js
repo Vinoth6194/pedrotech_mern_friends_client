@@ -45,8 +45,14 @@ function App() {
     });
   };
   const deleteFriend = (id) => {
-    Axios.delete(`http://localhost:3001/delete/${id}`);
-    console.log("askdlk");
+    Axios.delete(`http://localhost:3001/delete/${id}`).then(() => {
+      setFriendsList(
+        friendsList.filter((val) => {
+          return val._id !== id;
+        })
+      );
+    });
+    // console.log("askdlk");
   };
   return (
     <div className="App">
