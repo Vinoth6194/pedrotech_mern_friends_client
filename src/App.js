@@ -48,19 +48,16 @@ function App() {
           Add Friend
         </button>
       </div>
-      {friendsList.map((val) => {
-        return (
-          <div>
-            {/* {val.name}
-            {val.age} */}
-            <ul>
-              <li>
-                {val.name} {val.age}
-              </li>
-            </ul>
-          </div>
-        );
-      })}
+      <div className="listOfFriends">
+        {friendsList.map((val) => {
+          return (
+            <div className="friend">
+              <h3>Name: {val.name}</h3>
+              <h3>Age:{val.age}</h3>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

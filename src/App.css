@@ -35,3 +35,22 @@ body {
 .inputs button:hover {
   cursor: pointer;
 }
+.listOfFriends {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.friend {
+  width: 500px;
+  height: 60px;
+  background-color: green;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  margin: 10px;
+}
+.friend h3 {
+  margin-left: 10px;
+}
