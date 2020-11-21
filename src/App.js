@@ -52,9 +52,13 @@ function App() {
       <div className="listOfFriends">
         {friendsList.map((val) => {
           return (
-            <div className="friend">
-              <h3>Name: {val.name}</h3>
-              <h3>Age:{val.age}</h3>
+            <div className="friendContainer">
+              <div className="friend">
+                <h3>Name: {val.name}</h3>
+                <h3>Age:{val.age}</h3>
+              </div>
+              <button>Update</button>
+              <button id="removeBrdr">Delete</button>
             </div>
           );
         })}
