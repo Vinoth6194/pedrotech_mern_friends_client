@@ -37,10 +37,16 @@ function App() {
     }).then(() => {
       setFriendsList(
         friendsList.map((val) => {
-          return val._id == id ? { _id: id, name: val.name, age: newAge } : val;
+          return val._id === id
+            ? { _id: id, name: val.name, age: newAge }
+            : val;
         })
       );
     });
+  };
+  const deleteFriend = (id) => {
+    Axios.delete(`http://localhost:3001/delete/${id}`);
+    console.log("askdlk");
   };
   return (
     <div className="App">
@@ -77,7 +83,14 @@ function App() {
               >
                 Update
               </button>
-              <button id="removeBrdr">Delete</button>
+              <button
+                id="removeBrdr"
+                onClick={() => {
+                  deleteFriend(val._id);
+                }}
+              >
+                Delete
+              </button>
             </div>
           );
         })}
