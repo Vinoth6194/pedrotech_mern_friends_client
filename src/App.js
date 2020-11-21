@@ -29,6 +29,13 @@ function App() {
         console.log("Error");
       });
   }, []);
+  const updateFriend = (id) => {
+    const newAge = prompt("Your new age please");
+    Axios.put("http://localhost:3001/update", {
+      newAge: newAge,
+      id: id,
+    });
+  };
   return (
     <div className="App">
       {/* Mern Stack Tutorial from PedroTech */}
@@ -57,7 +64,13 @@ function App() {
                 <h3>Name: {val.name}</h3>
                 <h3>Age:{val.age}</h3>
               </div>
-              <button>Update</button>
+              <button
+                onClick={() => {
+                  updateFriend(val._id);
+                }}
+              >
+                Update
+              </button>
               <button id="removeBrdr">Delete</button>
             </div>
           );
