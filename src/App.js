@@ -12,11 +12,15 @@ function App() {
       age: age,
     })
       .then(() => {
+        //setName("");
+        //setAge("");
         alert("Post success");
       })
       .catch(() => {
         alert("Post not succeeded");
       });
+    //setName(" ");
+    //setAge(" ");
   };
   useEffect(() => {
     Axios.get("http://localhost:3001/read")
